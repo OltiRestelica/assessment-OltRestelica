@@ -13,7 +13,7 @@ const { database, connectDatabase } = require("./database");
 
 //tabelat
 const models = require("./models");
-const { User } = models;
+const { User, Video, Annotation, Bookmark } = models;
 
 database.sync();
 app.listen(process.env.PORT, () => {

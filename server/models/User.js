@@ -33,4 +33,10 @@ User.init(
   },
 );
 
+User.associate = (models) => {
+  User.hasMany(models.Video, { foreignKey: "user_id" });
+  User.hasMany(models.Annotation, { foreignKey: "user_id" });
+  User.hasMany(models.Bookmark, { foreignKey: "user_id" });
+};
+
 module.exports = User;
