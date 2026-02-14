@@ -9,6 +9,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+const { database, connectDatabase } = require("./database");
+
+//tabelat
+const models = require("./models");
+const { User } = models;
+
+database.sync();
 app.listen(process.env.PORT, () => {
   console.log("Server is running on port " + process.env.PORT);
+  connectDatabase();
 });
