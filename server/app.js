@@ -15,6 +15,11 @@ const { database, connectDatabase } = require("./database");
 const models = require("./models");
 const { User, Video, Annotation, Bookmark } = models;
 
+//routes
+const userRoutes = require("./routes/userRoutes");
+
+app.use("/user", userRoutes);
+
 database.sync();
 app.listen(process.env.PORT, () => {
   console.log("Server is running on port " + process.env.PORT);
