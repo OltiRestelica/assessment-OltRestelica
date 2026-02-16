@@ -20,8 +20,10 @@ const { User, Video, Annotation, Bookmark } = models;
 
 //routes
 const userRoutes = require("./routes/userRoutes");
+const videoRoutes = require("./routes/videoRoutes");
 
 app.use("/user", userRoutes);
+app.use("/video", videoRoutes);
 
 database.sync();
 app.listen(process.env.PORT, () => {
