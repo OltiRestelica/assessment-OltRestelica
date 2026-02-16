@@ -1,35 +1,34 @@
-const Annotation = require("../models/Annotation");
+const Bookmark = require("../models/Bookmark");
 const Video = require("../models/Video");
 
-const addAnnotation = (req, res) => {
+const addBookmark = (req, res) => {
   const { video_id } = req.params;
-  const { timestamp, description } = req.body;
+  const { timestamp, title } = req.body;
 
-  if (timestamp === undefined || !description) {
+  if (!title) {
     return res.status(400).json({
       status: 0,
-      message: "Timestamp and description are required",
+      message: "Title must be provided",
     });
   }
 
   Video.findByPk(video_id).then((video) => {
     if (!video) {
-      return res.status(400).json({
+      return res.status(404).json({
         status: 0,
         message: "Video not found",
       });
     }
-
-    return Annotation.create({
+    return Bookmark.create({
       video_id,
       user_id: req.user.user_id,
       timestamp,
-      description,
+      title,
     })
-      .then((annotation) => {
+      .then((bookmark) => {
         res.status(201).json({
           status: 1,
-          data: annotation,
+          data: bookmark,
         });
       })
       .catch((err) => {
@@ -41,4 +40,4 @@ const addAnnotation = (req, res) => {
   });
 };
 
-module.exports = { addAnnotation };
+module.exports = addBookmark;
