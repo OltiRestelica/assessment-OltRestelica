@@ -13,7 +13,7 @@ const VideoCard = ({ video }) => {
       </div>
       <div className="videoInfo">
         <h3>{video.title}</h3>
-        <p>Uplaoded by: {video.User?.name}</p>
+        <p>Uploaded by: {video.User?.name}</p>
         <p>{new Date(video.createdAt).toLocaleDateString()}</p>
       </div>
     </div>
