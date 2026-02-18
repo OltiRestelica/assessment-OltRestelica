@@ -5,7 +5,9 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import UploadVideo from "./pages/UploadVideo";
 import VideoPage from "./pages/VideoPage";
+import Admin from "./pages/Admin";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
 
 function App() {
   return (
@@ -35,6 +37,14 @@ function App() {
             <ProtectedRoute>
               <VideoPage />
             </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/adminPage"
+          element={
+            <AdminRoute>
+              <Admin />
+            </AdminRoute>
           }
         />
       </Routes>

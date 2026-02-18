@@ -1,0 +1,55 @@
+.uploadContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.uploadCard {
+  width: 420px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.uploadCard h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.uploadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.uploadForm input[type="text"],
+.uploadForm input[type="file"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.uploadForm input:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+.uploadForm button {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.uploadForm button:hover {
+  background-color: #145ca8;
+}

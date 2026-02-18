@@ -39,6 +39,7 @@ const Signup = () => {
           setPassword={setPassword}
           onSubmit={handleSubmit}
         />
+      <h4><a href="/login">LogIn?</a></h4>
       </div>
     </main>
   );

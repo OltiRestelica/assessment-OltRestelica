@@ -1,0 +1,80 @@
+.videoContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.videoCardWrapper {
+  width: 800px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.videoCardWrapper h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.videoCardWrapper video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.videoButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.videoButtons button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.videoButtons button:hover {
+  background-color: #145ca8;
+}
+
+.bookmarkSection {
+  margin-top: 20px;
+}
+
+.bookmarkItem {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.bookmarkItem:hover {
+  background-color: #e0e0e0;
+}
+
+.videoWrapper {
+  position: relative;
+}
+
+.annotationPopup {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+}

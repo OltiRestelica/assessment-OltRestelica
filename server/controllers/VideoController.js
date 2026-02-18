@@ -49,6 +49,7 @@ const getAllVideos = (req, res) => {
         attributes: ["user_id", "name"],
       },
     ],
+    order: [["createdAt", "DESC"]],
   })
     .then((videos) => {
       res.status(200).json({
@@ -74,9 +75,13 @@ const getVideoById = (req, res) => {
       },
       {
         model: Annotation,
+        where: { user_id: req.user.user_id },
+        required: false,
       },
       {
         model: Bookmark,
+        where: { user_id: req.user.user_id },
+        required: false,
       },
     ],
   })

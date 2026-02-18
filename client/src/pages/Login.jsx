@@ -37,6 +37,9 @@ const Login = () => {
           setPassword={setPassword}
           onSubmit={handleSubmit}
         />
+        <h4>
+          Dont have an account? <a href="/signup">Sign Up</a>
+        </h4>
       </div>
     </main>
   );

@@ -5,7 +5,7 @@
 .homeHeader {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 .uploadButton {
@@ -17,6 +17,17 @@
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+}
+.LogoutButton{
+   padding: 10px 20px;
+  cursor: pointer;
+  background-color: #f04806;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 1rem;
 }
 
 .videoGrid {

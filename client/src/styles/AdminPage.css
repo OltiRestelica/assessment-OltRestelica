@@ -1,0 +1,71 @@
+.adminPageWrapper {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 60px 0;
+}
+
+.adminCard {
+  width: 75%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.adminCard h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.adminVideoBlock {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 35px;
+  background-color: #fafafa;
+}
+
+.adminVideoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.deleteButton {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  background-color: #d32f2f;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.deleteButton:hover {
+  background-color: #b71c1c;
+}
+
+.adminSection {
+  margin-top: 20px;
+}
+
+.adminSection h4 {
+  margin-bottom: 10px;
+}
+
+.adminItem {
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.emptyText {
+  font-size: 14px;
+  color: #999;
+}

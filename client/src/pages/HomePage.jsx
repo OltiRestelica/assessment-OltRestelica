@@ -23,8 +23,21 @@ const HomePage = () => {
   return (
     <div className="homeContainer">
       <div className="homeHeader">
-        <button className="uploadButton" onClick={() => navigate("/upload")}>
+        <button
+          className="uploadButton"
+          onClick={() => navigate("/uploadVideo")}
+        >
           Upload Video
+        </button>
+        <button
+          className="LogoutButton"
+          onClick={() => {
+            localStorage.removeItem("token");
+            localStorage.removeItem("role");
+            navigate("/login");
+          }}
+        >
+          Logout
         </button>
       </div>
       <div className="videoGrid">
